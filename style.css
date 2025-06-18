@@ -81,10 +81,19 @@ input [type="text"]::placeholder {
     color: var(--grey);
 }
 
-.todo-container {
+/* .todo-container {
     display: flex;
     gap: 1rem;
+} */
+
+.todo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 3px 0; /* Reduce top and bottom margin */
+  padding: 2px 0;
 }
+
 
 ul {
     padding: 0;
@@ -92,12 +101,18 @@ ul {
     overflow-y: scroll;
 }
 
-li {
+/* li {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
     padding: 1.3rem;
+} */
+li {
+    padding: 0.3rem 0;
+    margin: 0;
+    list-style: none;
 }
+
 
 #todoList p{
     display: flex;
@@ -154,7 +169,7 @@ input [type="checkbox"]::before::after {
     border: none;
     background-color: transparent;
     color: var(--grey);
-    font-size: 1rem;
+    font-size: 0.75rem;
 }
 
 .footer{
@@ -194,4 +209,41 @@ input [type="checkbox"]::before::after {
 
 .scroll::-webkit-scrollbar-track {
     display: none;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.filter-btn {
+    padding: 3px 9px;
+    font-size: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--grey-border);
+    color: var(--grey-dark);
+    font-weight: bold;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+#todoList li {
+  margin: 2px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.todo-container p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
 }
