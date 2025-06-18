@@ -4,26 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <section class="todo">
         <h2>To-Do List</h2>
+
         <div class="input">
             <input type="text" class="input-field" id="todoInput" placeholder="Add a new ToDo">
             <button class="btn">Add</button>
-
         </div>
+
+        <div class="filters">
+            <button class="filter-btn" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
         <ul class="scroll">
             <li id="todoList"></li>
         </ul>
+        
         <div>
             <hr class="counter">
             <div class="counter-container">
                 <p><span id="todoCount">0</span> items total</p>
                 <button id="deleteButton">Delete All</button>
             </div>
-
         </div>
     </section>
 
@@ -33,6 +40,7 @@
             <p class="author">Raj Aryan</p>
         </div>
     </footer>
-    <script src="./script.js" ></script>
+
+    <script src="scripts/script.js" defer></script>
 </body>
 </html>
